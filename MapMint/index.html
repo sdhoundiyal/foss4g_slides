@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MapMint| The 100% web services oriented GIS platform</title>
+<meta name="description" content="FOSS4G 2019 MapMint presentation">
+<meta name="author" content="G&eacute;rald Fenoy">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="lib/css/zenburn.css">
+<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+</script>
+
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body onload="init()">
+
+<style type="text/css">
+.event {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+</style>
+<a class="event" href="http://2021.foss4.org/" target="_blank"><img class="img-thumbnail" src="https://2021.foss4g.org/images/logo_horizontal_b.svg" width="350"></a>
+
+<a href="http://geolabs.fr" target="_blank" class="osgeo">
+<img src="http://geolabs.fr/img/geolabs.png" width="150" />
+</a>
+
+	
+	<a href="http://mapmint.com" target="_blank" class="mm">
+		<img src="img/mapmint-logo.png" width="65" height="65" />
+	</a>
+		<div class="reveal">
+		
+		
+<ul class="auth">
+					<li>Gérald FENOY - <a href="http://geolabs.fr" target="_blank">GeoLabs</a> &#160;&#160; |</li>
+					<li><a href="http://twitter.com/mapmint" target="_blank" class="twt">@mapmint</a> &#160;&#160; |</li>
+					<li><a href="http://mapmint.com" target="_blank" class="twt">http://mapmint.com</a></li>
+					</ul>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+
+					<table style="width:100%">
+						<tr>
+							<td>
+								<img src="img/mmlogo-big.png" width="300" height="300"/>
+							</td>
+							<td style="vertical-align:top;">
+								<h1>Map<span>Mint</span></h1>
+								<h3>The 100% service-oriented <span>GIS platform</span>
+							</td>
+						</tr>
+					</table>
+					
+
+				</section>
+
+
+
+				</section>
+
+				<section>
+					<h2>Fast and easy webmapping</h2>
+	</br>
+	<p class="page2">Focus on map making, not on map coding !</p>
+													
+								<center><img src="img/ncp.jpg" />
+								<p><a href="http://mapmint.com" class="tmmt" target="_blank">http://mapmint.com</a>
+								</center>
+					</table>
+				</section>
+
+
+				
+				
+				<section>
+					<h2>OGC standards oriented architecture</h2>
+					</br>
+					
+							<table style="width:100%">
+						<tr>
+							<td>
+								<img src="img/mmarch.png" width="400" height="236"/>
+							</td>
+							<td style="vertical-align:top;">
+								<p class="page2"><b>Web Processing Service</b></p>
+								<p class="page2">Web Feature Service</p>
+								<p class="page2">Web Map Service</p>
+								<p class="page2">Web Map Tile Service</p>
+								</br>
+								<p class="page">Everything is a process !</p>
+							</td>
+							
+						</tr>
+					</table>
+
+				</section>
+				
+				<section data-transition="linear" data-background="#9ddf51" data-background-transition="slide">
+					<h2 class="onc">What's inside ?</h2>
+		
+					<table style="width:100%;margin:50px 0 0 0">
+						<tr>
+
+							<td style="vertical-align:top;">
+			<center>
+								<p class="page"><img src="img/zoo-logo-green.png" width="100" height="100"/>&#160;&#160;&#160;<img src="img/ms-logo-green.png" width="100" height="100"/>&#160;&#160;&#160;<img src="img/gdal-logo-green.png" width="100" height="100"/>&#160;&#160;&#160;<img src="img/ol-logo-green.png" width="100" height="100"/></p>
+								
+								<p class="pag"><a href="http://zoo-project.org" target="_blank" class="urm">ZOO-Project </a> as WPS server</p>
+								<p class="pag"><a href="http://mapserver.org" target="_blank" class="urm">MapServer</a> as WMS/WFS server</p>
+								<p class="pag"><a href="http://gdal.org" target="_blank" class="urm">GDAL/OGR</a> as processing algorithms</p>
+								<p class="pag"><a href="http://openlayers.org" target="_blank" class="urm">OpenLayers</a> as webmapping client</p>
+								</center>
+							</td>
+						</tr>
+					</table>
+				</section>
+
+
+				<section data-transition="linear" data-background="#abf459" data-background-transition="slide">
+					<h2 class="onc">Administration
+					/ Public Access</h2>
+					      <img src="img/MMLogin.png" width="300" />
+					      <img src="img/MMPublic.png" width="400" />
+					<p class="page">Default administration modules (Dashboard, Distiller, Manager & Publisher)</p>
+								<p
+					class="page">Advanced modules
+					(Georeferencer, Tables, Importer, Indicators & Routing)</p>
+
+</center>
+				</section>
+				<section data-transition="linear" data-background="#9ddf51" data-background-transition="slide">
+					<h2 class="onc">Dashboard module</h2>
+					
+								<img src="img/MMDashboard.png" width="100%"/>
+					<p class="page"><b>Configure</b> and  <b>oversee</b> your SDI</p>
+				</section>
+				
+				<section data-transition="linear" data-background="#abf459" data-background-transition="slide">
+					<h2 class="onc">Distiller module</h2>
+					
+								<img src="img/MMDistiller.png" width="100%" />
+					<p class="page"><b>Manage</b>, <b>process</b> and <b>publish</b> spatial data</p>
+				</section>
+				
+				<section data-background="#abf459">
+					<h2 class="onc">Orfeo ToolBox from the Distiller </h2>
+					
+					<img src="img/mmui-otb.png" height="450" />
+						
+				</section>				
+				<section data-background="#abf459">
+					<h2 class="onc">SAGA-GIS from the Distiller </h2>
+					
+					<img src="img/mmui-saga.png" height="450" />
+						
+				</section>				
+
+				
+				<section data-transition="linear" data-background="#9ddf51" data-background-transition="slide">
+										<h2 class="onc">Manager module</h2>
+					
+								<img src="img/MMManager.png" height="450" />
+					<p class="page"><b>Create</b>, <b>save</b> and <b>manage</b> maps</b></p>
+				</section>
+
+				<section data-background="#9ddf51" >
+					<h2 class="onc">Vector Timeline Classes </h2>
+					
+					<img src="img/TimelineClasses.png" height="440" />
+						
+				</section>				
+				<section data-background="#9ddf51">
+					<h2 class="onc">Vector Timeline Classes use </h2>
+					
+					<img src="img/TimelineClassesUse.png" width="800" height="440" />
+						
+				</section>				
+				<section data-background="#9ddf51">
+					<h2 class="onc">Raster Timeline </h2>
+					<img
+				src="img/RasterTimeline1.png" style="float:left;width:100%"/>
+						
+				</section>				
+				<section data-background="#9ddf51">
+					<h2 class="onc">Raster Timeline </h2>
+										<img src="img/RasterTimeline2.png"  style="float:left;width:100%" />
+
+						
+				</section>				
+					
+				<section data-transition="linear" data-background="#abf459" data-background-transition="slide">
+					<h2 class="onc">Pulisher module</h2>
+					
+								<img src="img/MMPublisher.png" width="800" height="450" />
+					<p class="page"><b>Configure</b> and <b>publish</b> webmapping applications </p>
+				</section>
+				
+				<section>
+					<h2>Example published apps</h2>
+					
+					<table>
+					<tr>
+					<td>
+						<img src="img/MMUI1.png" width="500" />		
+				    </td>
+					<td>
+						<img src="img/MMUI2.png" width="500"/>		
+					</td>
+					</tr><tr>
+					<td>
+						<img src="img/MMUI5.png" width="500" />		
+				    </td>
+					<td>
+						<img src="img/MMUI6.png" width="500"/>		
+				    </td>
+				    </tr>
+						</table>
+				</section>
+				<section>
+					<h2>
+						<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647z"/>
+</svg>
+ Security Proxy (OWS-Security) </h2>
+					
+					<img src="img/Security.png" width="800" height="440" />
+						 <p class="page">
+						 Secure your WMS, WFS
+						 and WCS by using the
+						 standard definition
+						 from the OGC and
+						 access your data
+						 securly with QGIS (and
+						 proprietary softwares
+						 too).
+						 </p>
+				</section>				
+				<section>
+					<h2>Planet BaseLayers (1) </h2>
+					
+					<img src="img/PlanetBS1.png"  height="450" />
+						<p class="page">
+						 Add support for
+						multiple Planet Base
+						Layers
+						</p>
+				</section>				
+				<section>
+					<h2>Planet BaseLayers (2) </h2>
+					
+					<img src="img/PlanetBS2.png" />
+						
+				</section>				
+				<section>
+					<h2>Create  your own module </h2>
+					
+					<img src="img/mapmint-module.png" />
+
+					<p class="page"><b>Ease</b>
+						the addition of your
+						own WPS services as
+						 <b>MapMint Module</b>
+					</p>
+	 
+				</section>				
+
+						
+				<section>
+					<h2>GeoReferencer</h2>
+					
+					<img src="img/GeoRefMM2.png" />
+						<p
+						class="page">Georeference
+						raster data online
+						</p>
+						
+				</section>
+				<section>
+					<h2>Indicators (1)</h2>
+					
+					<img src="img/MMIndicators.png"/>
+						<p  class="page">Join GIS data with
+						other data of  any
+						kind to produce table
+						views, graphs and
+						reports
+						</p>
+				</section>
+				<section>
+					<h2>Indicators (2)</h2>
+					
+					<img src="img/MMIndicatorsC.png" width="800" height="440" />
+						
+				</section>				
+
+				<section>
+					<h2> Tables Module</h2>
+						<img src="img/MMTables.png"/>
+					<p class="page"><b>Configure</b>
+					and <b>publish</b> your
+					attribute table
+					and its history </p>
+						</section>				
+				<section>
+					<h2>Tables Module: MapMint4ME</h2>
+					<div class="col-md-4" style="float:left;width:30%">
+						<img
+						  src="img/MM4ME2.png"
+						  width="250" />
+						 </div>
+					<div class="col-md-4" style="float:left;width:30%">
+						<img
+						  src="img/MM4ME1.png"
+						  width="250" />
+						 </div>
+					<div class="col-md-4" style="float:left;width:30%">
+						<img
+						  src="img/MM4ME.png"
+						  width="250" />
+						 </div>
+						 <br style="clear: both"/>
+					<p class="page"><b>Fill your
+					data on the field with or
+					without internet connnectivity </b>
+						 </p>
+						 <p class="page">
+						 GSoC 2019 for OSGeo:
+						 introducing AR
+					support and port code from
+					Python2 to Python3.</p> 
+						 <p class="page">
+						 GSoC 2020 for OSGeo:
+						 enhanced AR support.</p>
+						 <p class="page">
+						 GSoC 2021 for OSGeo:
+						 enhanced AR Draw
+					experience, 3D scene
+					reconstruction from data
+					collected on the field, 3D scene
+					viewer using Three.js, 3D
+					scene viewer using Cesium.
+					.</p>
+						 
+						 <p class="page">
+						 Thanks to the
+						 mentors and the
+						 students for the work
+						 done and, to Google
+						 for continuously
+						 supporting Open
+						 Source Software! 
+						 </p>
+						 </section>				
+
+				<section>
+					<h2>Tables Module: Geometry creation </h2>
+					
+					<img src="img/TablesGeometry.png" height="440" />
+						 <p class="page">
+						 You can manually
+						 record new data but,
+						 you can also take
+						 advantage of the WPS
+						 services available.
+						 </p>
+				</section>				
+				<section>
+					<h2>Importer Module</h2>
+						<img
+						  src="img/MMImporter.png"
+						  />
+					<p class="page"><b>Import</b>
+					any <b>Exotic</b> Excel File</p>
+						 </section>
+	<section data-background-transition="slide">
+	<h2>MapMint on Docker</h2>
+	<p class="page">Build, deploy and run MapMint SDI everywhere using Docker Compose!</p>
+						 <br />
+	<div class="col-md-4" style="float:left;width:30%">
+	<img src="img/Compose.png" width="150" />
+        </div>
+	<div class="col-md-8" style="float:left;width:70%">
+	  <img src="img/mm-dockerhub.png" />
+	</div>
+	<br/>
+	<div class="col-md-6" style="float:left;width:50%">
+	  <img src="img/mmui-docker1.png" />
+	</div>
+	<div class="col-md-6" style="float:left;width:50%">
+	  <img src="img/mmui-docker.png" />
+	</div>
+	</section>
+						 
+<section>
+<h2>What are the next steps?</h2>
+
+						 <br />
+						 <ul>
+						   <li>
+<p class="page">
+Publish docker image for each osgeolive release.
+						   </p>
+						   </li>
+						   <li>
+<p class="page">
+Document the JavaScript API used when integrating your
+						 module within the
+						 MapMint Map UI
+						   </p>
+						   <li>
+						   <p class="page">
+						   Integrate a short how to use
+						 MapMint using docker
+						 in the general documentation
+						   </p>
+						   <li>
+						   <p class="page">
+						   Provide more complex
+						 modules examples
+						   </p>
+						   </li>
+						   <li>
+						   <p class="page">
+						   Create video
+						 demonstrating what
+						 can be done using the
+						 MapMint
+						 administration UI
+						   </p>
+						   </li>
+						   <li>
+						   <p class="page">
+						   Document how to use
+						 the binary docker image.
+						   </p>
+						   </li>
+						   </ul>
+
+						   <h3>More effort on the general documentation</h3>
+
+</section>				
+
+				<section data-transition="linear" data-background="#9ddf51" data-background-transition="slide">
+					<h1 class="mmm">Map<span>Mint</span></h1>
+					<h2 class="onc">Give it a try</h2>
+								</br>
+
+				    <p class="pag">MapMint source code is available is on <a href="https://github.com/mapmint/mapmint" target="_blank" class="urm">Github</a></p>
+								<p class="pag"><a href="https://github.com/mapmint/mapmint" target="_blank" class="urm">https://github.com/mapmint/mapmint</a></p>
+								</br>
+								<p
+								class="pag">MapMint
+								Full Documentation is available on <a href="http://mapmint.github.io/userguide-fr/" target="_blank" class="urm">GitHub</a></p>
+								<p class="pag"><a href="http://mapmint.github.io/userguide-fr/" target="_blank" class="urm">http://mapmint.github.io/userguide-fr/</a></p>
+								</br>
+								<p
+								class="pag">MapMint
+								Ansible
+								installer
+								is available on <a href="http://github.com/mapmint/ansible-roles" target="_blank" class="urm">GitHub</a></p>
+								<p class="pag"><a href="http://github.com/mapmint/ansible-roles" target="_blank" class="urm">http://github.com/mapmint/ansible-roles</a></p>
+
+	 					</section>
+				<section>
+					<h2>Thanks to Venkatesh
+				Raghavan and Rajat Shinde</h2>
+
+					<img src="img/rajat.png" width="800" />
+						<p
+						class="page">Continuous
+						support, help in
+						mentoring the GSoC and
+						many more contributions</p>
+				</section>
+				<section>
+					<h2>Thanks to the Coillte company</h2>
+
+                                        <img
+					src="img/coillte_logo.png"
+					width="100" style="position: absolute" />
+					<img src="img/coillte_img.png" width="800" height="340" />
+						
+				</section>
+<section>
+					<h2>Thanks to KelQartier / KelFoncier </h2>
+					
+					<img src="img/Kq.png" width="800" height="440" />
+						
+				</section>				
+
+				<section>
+					<h1 class="onct">Questions ?</h1>
+					
+					</br>					
+					
+				</section>
+					      </div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+	</body>
+</html>
